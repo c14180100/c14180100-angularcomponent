@@ -1,3 +1,11 @@
-<p>
-hal1 works!
-</p>
+<span>Judul </span><br><input type="text" [(ngModel)]="judul"><br><br>
+<span>Isi </span><br><input type="textarea" [(ngModel)]="isi"><br><br>
+<span>Tanggal </span><br><input type="date" [(ngModel)]="tanggal"><br><br>
+<button (click)="simpan()">Simpan</button>
+<br><br><br>
+
+<div>
+  <button *ngFor = "let note of notes; let i = index" class="buttonNotes" (click)="showDetails(i)"> 
+    {{note.judul}}
+  </button>
+</div>
