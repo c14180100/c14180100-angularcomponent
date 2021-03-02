@@ -13,7 +13,7 @@ import { GlobalVarService } from './global-var.service';
 
 const ROUTES: Routes = [
   {path : "hal1", component: Hal1Component},
-  {path : "hal2/:judul/:isi/:tanggal", component: Hal2Component},
+  {path : "hal2/:id", component: Hal2Component},
   {path : "hal3", component: Hal3Component},
 ];
 

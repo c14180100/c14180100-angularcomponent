@@ -15,4 +15,8 @@ export class GlobalVarService {
     return this.notes;
   }
 
+  changeNote(obj, index){
+    this.notes[index] = obj;
+  }
+
 }
