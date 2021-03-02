@@ -1,3 +1,6 @@
-<p>
-hal3 works!
-</p>
+<div>
+  <div *ngFor="let note of notes" class="listDiv">
+    {{note.judul}}
+  </div>
+</div>
+<button (click)="backToHal1()">Kembali ke Hal 1</button>

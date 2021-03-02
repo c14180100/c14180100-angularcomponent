@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalVarService } from '../global-var.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class Hal2Component implements OnInit {
   public note;
   idNote : number;
 
-  constructor(private route : ActivatedRoute, public globalvar : GlobalVarService) { }
+  constructor(private route : ActivatedRoute, public globalvar : GlobalVarService, private router : Router) { }
 
   ngOnInit() {
     this.idNote = parseInt(this.route.snapshot.paramMap.get('id'));
@@ -24,4 +24,11 @@ export class Hal2Component implements OnInit {
     this.globalvar.changeNote(this.note,this.idNote);
   }
 
+  seeFavorite(){
+    this.router.navigate(['/hal3']);
+  }
+
+  backToHal1(){
+    this.router.navigate(['/hal1']);
+  }
 }

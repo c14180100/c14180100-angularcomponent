@@ -17,7 +17,7 @@ export class Hal1Component implements OnInit {
   constructor(public globalvar : GlobalVarService, private router : Router) { }
 
   ngOnInit() {
-    
+    this.notes = this.globalvar.getNotes();
   }
 
   simpan(){
@@ -33,6 +33,10 @@ export class Hal1Component implements OnInit {
 
   showDetails(index){
     this.router.navigate(["/hal2/" + index]);
+  }
+
+  seeFavorite(){
+    this.router.navigate(['/hal3']);
   }
 
 }
